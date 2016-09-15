@@ -1,0 +1,13 @@
+Imagining that I have a class like this:
+
+<div style="background:red;" class="oh-no-inline-styles"><p>This tag has an inline style</p></div>
+
+and a need to change that background color to green, I would do it like this:
+
+.oh-no-inline-styles {
+    background-color: green !important;
+}
+
+Because when I add "!important" to the sentence, I make this definition to override the inline style,
+
+setting the background color to green. 
