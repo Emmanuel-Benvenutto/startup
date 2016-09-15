@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <title>Form</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
@@ -11,23 +14,24 @@
                 <ul>
                     <li>
                         <label for="first_name">First Name:</label>
-                        <input type="text" name="first_name" value="" required=""/>
+                        <input type="text" name="first_name" value="" required="" id="first_name"/>
                     </li>
                     <li>
                         <label for="last_name">Last Name:</label>
-                        <input type="text" name="last_name" value="" required="" />
+                        <input type="text" name="last_name" value="" required="" id="last_name"/>
                     </li>
                     <li>
                         <label for="email">Email:</label>
-                        <input type="text" name="email" value="" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+                        <input type="text" name="email" value="" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email"/>
                     </li>
                     <li>
                         <label for="birthday">Birthday:</label>
-                        <input type="text" name="birthday" value="" required=""/>
+                        <input type="text" name="birthday" value="" required="" id="birthday"/>
                     </li>
                     <li>
                         <label for="sport">Favourite Sport:</label>
-                        <select name="sport" value="Select" required="">
+                        <select name="sport" required="" id="sport">
+                            <option value="">Select Sport</option>
                             <option value="football">Football</option>
                             <option value="basketball">Basketball</option>
                             <option value="tenis">Tenis</option>
@@ -36,7 +40,7 @@
                     </li>
                     <li>
                         <label for="bio">Bio description:</label>
-                        <textarea name="bio" cols="25" rows="3" required=""></textarea>
+                        <textarea name="bio" cols="25" rows="3" required="" id="bio"></textarea>
                     </li>
                     <li>
                         <input type="submit" value="submit" />
