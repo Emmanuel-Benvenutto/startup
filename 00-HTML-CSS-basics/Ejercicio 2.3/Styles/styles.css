@@ -49,7 +49,7 @@ html {
     background-color: magenta;
 } 
 
-*[class*="a"]:not([class$="r"]) {
+*[class*=a]:not([class$=r]) {
     background-color: blue;
     /*I could't make it work for the "header" class.*/
 } 
