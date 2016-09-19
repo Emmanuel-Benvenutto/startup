@@ -1,0 +1,8 @@
+* {
+    background-color: white;
+    margin: 15px;
+}
+
+.matrixTable, .matrixTable--row2, .matrixTable--row2 {
+   border: 1px solid black;
+}
