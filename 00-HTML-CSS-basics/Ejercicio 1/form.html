@@ -7,46 +7,30 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <fieldset role="main">
-            <legend>Personal Information</legend>
-            <form action="script.php" method="post">
+        <form action="script.php" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
                 <input type="hidden" name="redirect" value="http://www.opera.com" />
-                <ul>
-                    <li>
-                        <label for="first_name">First Name:</label>
-                        <input type="text" name="first_name" value="" required="" id="first_name"/>
-                    </li>
-                    <li>
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" name="last_name" value="" required="" id="last_name"/>
-                    </li>
-                    <li>
-                        <label for="email">Email:</label>
-                        <input type="text" name="email" value="" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email"/>
-                    </li>
-                    <li>
-                        <label for="birthday">Birthday:</label>
-                        <input type="text" name="birthday" value="" required="" id="birthday"/>
-                    </li>
-                    <li>
-                        <label for="sport">Favourite Sport:</label>
-                        <select name="sport" required="" id="sport">
-                            <option value="">Select Sport</option>
-                            <option value="football">Football</option>
-                            <option value="basketball">Basketball</option>
-                            <option value="tenis">Tenis</option>
-                            <option value="rugby">Rugby</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="bio">Bio description:</label>
-                        <textarea name="bio" cols="25" rows="3" required="" id="bio"></textarea>
-                    </li>
-                    <li>
-                        <input type="submit" value="submit" />
-                        <input type="reset" value="reset" />
-                    </li>
-                </ul>
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" value="" required id="first_name"/><br> <!-- Is it ok to use <br> tag? -->
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" value="" required id="last_name"/><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" value="" required id="email"/><br>
+                <label for="birthday">Birthday:</label>
+                <input type="text" name="birthday" value="" required id="birthday"/><br>
+                <label for="sport">Favourite Sport:</label>
+                <select name="sport" required id="sport">
+                    <option>Select Sport</option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="rugby">Rugby</option>
+                </select><br>
+                <label for="bio">Bio description:</label>
+                <textarea name="bio" cols="25" rows="3" required id="bio"></textarea><br>
+                <input type="submit" value="submit" />
+                <input type="reset" value="reset" />
             </form>
         </fieldset>
     </body>

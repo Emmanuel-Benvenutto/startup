@@ -1,7 +1,7 @@
-td, th {
+.cell {
     border: 1px solid black;
 }
 
 fieldset {
-    width: 40%;
+    width: 25%;
 }
