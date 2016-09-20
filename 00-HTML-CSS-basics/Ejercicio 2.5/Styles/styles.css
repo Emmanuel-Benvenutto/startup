@@ -1,26 +1,26 @@
 
 html * {
-    margin:15px;
     border-radius: 25px;
+    margin: 15px;
 }
 
 body {
-        background-color: #363C3D;
-        color:white;
-        text-align: center;
-        font-size: 20px;
-        box-sizing: border-box;
+    background-color: #363C3D;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 .header {
     background-color: #596163;
-    margin-bottom: 0px;;
     height: 80px;
+    margin-bottom: 0px;;
 }
 
-.navigation,.content {
+.navigation, .content {
     background-color: #596163;
-    float:left;
+    float: left;
     height: 480px;
 }
 
@@ -33,7 +33,6 @@ body {
 
 .navigation {
     width: 21%;
-
 }
 
 .content {
@@ -43,19 +42,19 @@ body {
 
 .footer {
     background-color: #596163;
-    clear:both;
+    clear: both;
     height: 60px;
     margin: 15px;
 }
 
-.content__elem1,.content__elem2,.content__elem3 {
+.content--elem1,.content--elem2,.content--elem3 {
     background-color: #C3C6C7;
 }
-.content__elem1,.content__elem3 {
+.content--elem1,.content--elem3 {
     height: 70px;
 }
 
-.content__elem2 {
+.content--elem2 {
     height: 250px;
 }
 
