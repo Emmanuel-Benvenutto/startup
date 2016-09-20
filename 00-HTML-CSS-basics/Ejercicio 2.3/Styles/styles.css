@@ -10,37 +10,34 @@ html {
 .header {
     background-color: #90C3D4;
     font-size: 46px;
-}
-
-.header__title {
     text-align: center;
 }
 
 .navigation,.content,.sidebar {
     float:left;
-    margin:10px;
+    margin: 10px;
 }
 
 .navigation {
-    width: 20%;
     background-color: #90C3D4;
     font-size: 12px;
+    width: 20%;   
 }
 
 .content {
+    font-size: 14px;
     width: 50%;
-    font-size:14px;
 }
 
 .sidebar {
-    width: 20%;
     background-color: #90C3D4;
     font-size:10px;
+    width: 20%;
 }
 
 .footer {
-    clear:both;
     background-color: #90C3D4;
+    clear: both;
     font-size: 10px;
     text-align: center;
 }
@@ -51,7 +48,6 @@ html {
 
 *[class*=a]:not([class$=r]) {
     background-color: blue;
-    /*I could't make it work for the "header" class.*/
 } 
 
 
