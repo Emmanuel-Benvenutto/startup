@@ -2,31 +2,31 @@
     box-sizing: border-box;
 }
 
-.header__title {
+.headerMain--title {
     text-align: center;
 }
 
-.nav,.section,.aside{
+.navLeft,.sectionMain,.asideRight{
     float:left;
     margin:10px;
 }
 
-.nav {
+.navLeft {
     width: 20%;
 }
 
-.section {
+.sectionMain {
     width: 50%;
 }
 
-.aside {
+.asideRight {
     width: 20%;
 }
 
-.footer {
+.footerMain {
     clear:both;
 }
 
-.footer__text {
+.footerMain--text {
     text-align: center;
 }
