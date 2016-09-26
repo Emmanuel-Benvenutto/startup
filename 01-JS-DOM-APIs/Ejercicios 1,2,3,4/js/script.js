@@ -1,4 +1,5 @@
-window.onload = function(){
-    var mainHidden= document.getElementById("main_hidden");
+window.onload = function() {
+    let mainHidden= document.getElementById("main-section");
+
     mainHidden.className = "main main_show";
 }
