@@ -1,0 +1,35 @@
+.wrapper--item {
+    border-top: 1px solid black;
+    margin: 10px;   
+}
+
+.wrapper--item:first-child {
+    border: none;
+}
+
+.wrapper--movieList {
+    border: 1px solid black;
+    width: 30%;
+}
+
+.wrapper--details {
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    margin: 20px;
+}
+
+.wrapper--formItem {
+    margin: 5px;
+}
+
+.wrapper--form {
+    clear:both;
+    float: left;
+    margin: 20px;
+    width: 25%;
+}
