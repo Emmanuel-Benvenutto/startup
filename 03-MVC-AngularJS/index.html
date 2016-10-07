@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
@@ -15,8 +16,8 @@
             <nav class= "wrapper--movieList">
                 <ul>
                     <li ng-repeat="movie in movies.details" class="wrapper--item">
-                        <a ng-hide="false"></>
-                        <a href="" ng-click="selectMovie(movie)">Title: {{ movie.title }}</a><br>
+                        <p>Title: {{ movie.title }}</p><br>
+                        <a href="#{{$index}}" ng-click="selectMovie(movie)">Show more details</a><br>
                         <a href="" ng-click="deleteMovie($index)">Delete Movie</a>   |           
                         <a href="" ng-click="editMovie($index)">Edit Movie</a>  
                     </li>
@@ -24,12 +25,7 @@
                 </ul>
             </nav>
             <div class="wrapper--details">
-                <section ng-show="showDetails">
-                    <h1>{{selected.title}}</h1>
-                    <p>Duration: {{selected.duration}}</p>
-                    <p>Year: {{selected.year}}</p>
-                    <p>Synopsis: {{selected.synopsis}}</p>
-                </section>
+                <section ng-view ng-show="showDetails"></section>
             </div>
             <aside ng-controller="subController">
                 <form class="wrapper--form" ng-submit="submitAdd()">

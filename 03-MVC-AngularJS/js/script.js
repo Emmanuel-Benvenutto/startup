@@ -1,9 +1,19 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
+
+myApp.config(function($routeProvider) {
+    $routeProvider
+    .when("/:id", {
+        template : (`<h1>Title: {{selected.title}}</h1><br>
+        <p>Duration: {{selected.duration}}</p>
+        <p>Year: {{selected.year}}</p>
+        <p>Synopsis: {{selected.synopsis}}</p>`)
+    })
+});
 
 myApp.service('storage',[function() {
 
     this.save  = function (moviesUnsaved) {
-        localStorage.setItem('movies', JSON.stringify(moviesUnsaved));
+        localStorage.setItem('movies', angular.toJson(moviesUnsaved));
     }
 
     this.get  = function() {
@@ -15,7 +25,7 @@ myApp.service('storage',[function() {
         return movies;
     }
 }]);
- 
+
 myApp.controller('mainController', ['$scope', 'storage', function ($scope, storage) {
     let moviesUpdate;
 
