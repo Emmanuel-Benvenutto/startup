@@ -1,0 +1,9 @@
+.wrapper--dropZone {
+    background-color: #c9cacc;
+    border: 2px solid black;
+    color: white;
+    font-size: 20px;
+    height: 200px;
+    text-align: center;    
+    width: 600px;
+}

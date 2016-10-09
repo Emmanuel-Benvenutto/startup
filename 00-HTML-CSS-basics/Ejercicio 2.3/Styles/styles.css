@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px !important;
+    font-family: serif;
+}
+
+.header {
+    background-color: #90C3D4;
+    font-size: 46px;
+}
+
+.header__title {
+    text-align: center;
+}
+
+.navigation,.content,.sidebar {
+    float:left;
+    margin:10px;
+}
+
+.navigation {
+    width: 20%;
+    background-color: #90C3D4;
+    font-size: 12px;
+}
+
+.content {
+    width: 50%;
+    font-size:14px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #90C3D4;
+    font-size:10px;
+}
+
+.footer {
+    clear:both;
+    background-color: #90C3D4;
+    font-size: 10px;
+    text-align: center;
+}
+
+*[class$="r"] {
+    background-color: magenta;
+} 
+
+*[class*=a]:not([class$=r]) {
+    background-color: blue;
+    /*I could't make it work for the "header" class.*/
+} 
+
+
+
