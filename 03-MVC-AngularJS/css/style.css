@@ -9,18 +9,24 @@
 
 .wrapper--movieList {
     border: 1px solid black;
+    float: left;
     width: 30%;
 }
 
 .wrapper--details {
     border: 1px solid black;
+    float: left;
     text-align: center;
-    width: 100%;
+    width: 80%;
 }
 
 .wrapper {
+    background-color: yellow;
     display: flex;
+    float: left;
     margin: 20px;
+    min-height: 500px;
+    width: 70%;
 }
 
 .wrapper--formItem {
@@ -28,8 +34,7 @@
 }
 
 .wrapper--form {
-    clear:both;
-    float: left;
+    float: right;
     margin: 20px;
-    width: 25%;
+    width: 15%;
 }

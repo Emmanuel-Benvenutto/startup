@@ -27,7 +27,8 @@
             <div class="wrapper--details">
                 <section ng-view ng-show="showDetails"></section>
             </div>
-            <aside ng-controller="subController">
+        </div>
+        <aside ng-controller="subController">
                 <form class="wrapper--form" ng-submit="submitAdd()">
                      <fieldset>
                         <legend>Add Movie</legend>
@@ -47,24 +48,23 @@
                     </fieldset>
                 </form>
                 <form class="wrapper--form" ng-submit="submitEdit()"  >
-                     <fieldset ng-disabled="isDisabled">
+                     <fieldset ng-disabled="storage.editDisabled">
                         <legend>Edit Movie</legend>
                             <label for="titleEdit">Title:</label>
-                            <input class="wrapper--formItem" type="text" name="titleEdit" ng-model="titleEdit" id="titleEdit" required >
+                            <input class="wrapper--formItem" type="text" name="titleEdit" ng-model="storage.editItem.title" id="titleEdit" required >
                             <br>
                             <label for="durationEdit">Duration:</label>
-                            <input class="wrapper--formItem" type="text" name="durationEdit" ng-model="durationEdit" id="durationEdit" required>
+                            <input class="wrapper--formItem" type="text" name="durationEdit" ng-model="storage.editItem.duration" id="durationEdit" required>
                             <br>
                             <label for="yearEdit">Year:</label>
-                            <input class="wrapper--formItem" type="text" name="yearEdit" ng-model="yearEdit" id="yearEdit" required>
+                            <input class="wrapper--formItem" type="text" name="yearEdit" ng-model="storage.editItem.year" id="yearEdit" required>
                             <br>
                             <label for="synopsisEdit">Synopsis:</label>
-                            <input class="wrapper--formItem" type="text" name="synopsisEdit" ng-model="synopsisEdit" id="synopsisEdit" required>
+                            <input class="wrapper--formItem" type="text" name="synopsisEdit" ng-model="storage.editItem.synopsis" id="synopsisEdit" required>
                             <br>
                             <input type="submit" name="Save" value="Save">                            
                     </fieldset>
                 </form>
             </aside>
-        </div>
     </body>
 </html>
