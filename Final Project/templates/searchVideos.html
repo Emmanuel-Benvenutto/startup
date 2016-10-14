@@ -1,0 +1,52 @@
+<div ng-controller="videosController" class="wrapperSearch">
+    <div class="row wrapperSearch--searchTextbox">
+        <section class="col-lg-12 wrapperSearch--searchMain">
+            <input type="textbox" name="search" class="wrapperSearch--textbox" placeholder="Please enter your search!" ng-model="search">
+            <input type="button" name="searchButton" value="Search" ng-click="searchVideos()">
+        </section>
+    </div>
+    <div class="wrapperSearch--scrollVideos" ng-show="scrollDisabled">
+        <a ng-repeat="item in data" ng-click="getVideo($index)">
+            <p class="wrapperSearch--itemTitle">{{item.snippet.title}}</p>
+            <img src="{{item.snippet.thumbnails.medium.url}}" class="img">
+        </a>
+    </div>
+    <div class="row wrapperSearch--selected" ng-show="videoDisabled">
+        <iframe ng-src={{selected.id}} class="col-lg-6 wrapperSearch--player"></iframe>
+        <h2 class="col-lg-6 wrapperSearch--videoTitle">{{selected.snippet.title}}</h2>
+        <label class="col-lg-2" ng-show="selectedDisabled">
+            Views: {{selected.statistics.viewCount}}
+        </label>
+        <label class="col-lg-2" ng-show="selectedDisabled">
+            Likes: {{selected.statistics.likeCount}}
+        </label>
+        <input type="button" name="Change" class="col-lg-2 wrapperSearch--addVideo" value="Add to playlist!" ng-click="addVideo()">
+        <p class="col-lg-6 wrapperSearch--description">
+            {{selected.snippet.description}}
+        </p>
+    </div>
+    <div class="col-lg-2 wrapperSearch--form">
+        <div class="row wrapperSearch--firstLabel" ng-show="videoDisabled">
+            <label class="wrapperSearch--newPlaylistTitle">Playlist Title:</label><br>
+            <input type="textbox" ng-model="new.playlistTitle">
+        </div>
+        <div class="row wrapperSearch--secondLabel" ng-show="videoDisabled">
+            <label class="wrapperSearch--newPlaylistDescription">Playlist Description:</label><br>
+            <input type="textbox" ng-model="new.playlistDescription"><br>
+            <input type="button" value="Create new Playlist" class="wrapperSearch--createPlaylist" ng-click="newPlaylist()">
+        </div>
+    </div>
+    <h2 class="col-lg-9 wrapperSearch--playlistTitle" ng-show="videoDisabled">{{ newPlaylistData.newPlaylist.title != null ? newPlaylistData.newPlaylist.title + " - My New Playlist!": "Create a new Playlist!" }}</h2>
+
+        <div class="col-lg-9 wrapperSearch--scrollPlaylist" ng-show="videoDisabled">
+            <a ng-repeat="item in newPlaylistData.newPlaylist.items">
+                <p class="wrapperSearch--itemTitle">{{item.title}}</p>
+                <img src="{{item.imgUrl}}" class="img">
+                <p ng-click="deleteVideo($index)">Delete</p>
+            </a>
+        </div>
+        <div class="row">
+            <input type="button" ng-show="videoDisabled" value="Save Playlist in Youtube!" class="col-lg-2 col-lg-offset-9 wrapperSearch--saveYoutube" ng-click="saveYoutube()">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular basics</title>
+        <meta name="description" content="Angular basics">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div ng-controller="mainController" class="wrapper">
+            <nav class= "wrapper--movieList">
+                <ul>
+                    <li ng-repeat="movie in movies.details" class="wrapper--item">
+                        <p>Title: {{ movie.title }}</p><br>
+                        <a href="#{{$index}}" ng-click="selectMovie(movie)">Show more details</a><br>
+                        <a href="" ng-click="deleteMovie($index)">Delete Movie</a>   |           
+                        <a href="" ng-click="editMovie($index)">Edit Movie</a>  
+                    </li>
+                    <li ng-hide="movies.details.length > 0" class="wrapper--item">Please add a new movie!</li>
+                </ul>
+            </nav>
+            <div class="wrapper--details">
+                <section ng-view ng-show="showDetails"></section>
+            </div>
+        </div>
+        <aside ng-controller="subController">
+                <form class="wrapper--form" ng-submit="submitAdd()">
+                     <fieldset>
+                        <legend>Add Movie</legend>
+                            <label for="titleAdd">Title:</label>
+                            <input class="wrapper--formItem" type="text" name="Title" ng-model="titleAdd" id="titleAdd" required>
+                            <br>
+                            <label for="durationAdd">Duration:</label>
+                            <input class="wrapper--formItem" type="text" name="Duration" ng-model="durationAdd" id="durationAdd" required>
+                            <br>
+                            <label for="yearAdd">Year:</label>
+                            <input class="wrapper--formItem" type="text" name="Year" ng-model="yearAdd" id="yearAdd" required>
+                            <br>
+                            <label for="synopsisAdd">Synopsis:</label>
+                            <input class="wrapper--formItem" type="text" name="Year" ng-model="synopsisAdd" id="synopsisAdd" required>
+                            <br>
+                            <input type="submit" name="Add" value="Add">
+                    </fieldset>
+                </form>
+                <form class="wrapper--form" ng-submit="submitEdit()"  >
+                     <fieldset ng-disabled="storage.editDisabled">
+                        <legend>Edit Movie</legend>
+                            <label for="titleEdit">Title:</label>
+                            <input class="wrapper--formItem" type="text" name="titleEdit" ng-model="storage.editItem.title" id="titleEdit" required >
+                            <br>
+                            <label for="durationEdit">Duration:</label>
+                            <input class="wrapper--formItem" type="text" name="durationEdit" ng-model="storage.editItem.duration" id="durationEdit" required>
+                            <br>
+                            <label for="yearEdit">Year:</label>
+                            <input class="wrapper--formItem" type="text" name="yearEdit" ng-model="storage.editItem.year" id="yearEdit" required>
+                            <br>
+                            <label for="synopsisEdit">Synopsis:</label>
+                            <input class="wrapper--formItem" type="text" name="synopsisEdit" ng-model="storage.editItem.synopsis" id="synopsisEdit" required>
+                            <br>
+                            <input type="submit" name="Save" value="Save">                            
+                    </fieldset>
+                </form>
+            </aside>
+    </body>
+</html>

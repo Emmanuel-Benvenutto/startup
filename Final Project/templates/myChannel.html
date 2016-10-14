@@ -1,0 +1,50 @@
+<div ng-controller="myChannelController">
+    <div class="wrapperButton">
+        <input type="button" ng-click="bringChannel()" value="Bring my Channel!" id="channelButton" class="wrapperButton--channel">
+    </div>
+    <div ng-show="channelShow" class="wrapperChannel">
+        <div class="row">
+            <h1 class="col-lg-8 wrapperChannel--mainTitle hTitle">{{channel.snippet.title}} - My Channel!</h1>
+            <img src="{{channel.snippet.thumbnails.default.url}}" class="col-lg-1 wrapperChannel--Image img">
+        </div>
+        <div class="row">
+            <p class = "col-lg-2 wrapperChannel--Titles">My Playlists</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 wrapperChannel--scroll">
+                <a ng-repeat="item in playlists" ng-click="getPlaylistSelected($index)">
+                    <p class="wrapperChannel--title">{{item.snippet.title}}</p>
+                    <img src="{{item.snippet.thumbnails.default.url}}" class="wrapperChannel--imagePlaylists img">
+                </a>
+            </div>
+            <p class="col-lg-4 wrapperChannel--detailsTitle">{{playlistSelected.snippet.title}}</p>
+            <p class="col-lg-4 wrapperChannel--detailsDescription">{{playlistSelected.snippet.description}}</p>
+        </div>
+        <div class="row">
+            <p class = "col-lg-2 wrapperChannel--Titles">My Subscriptions</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 wrapperChannel--scroll">
+                <a ng-repeat="item in subscriptions" ng-click="getSubscriptionSelected($index)">
+                    <p class="wrapperChannel--title">{{item.snippet.title}}</p>
+                    <img src="{{item.snippet.thumbnails.medium.url}}"  class="imageSubscriptions img">
+                </a>
+            </div>
+            <p class="col-lg-4 wrapperChannel--detailsTitle">{{subscriptionSelected.snippet.title}}</p>
+            <p class="col-lg-4 wrapperChannel--detailsDescription">{{subscriptionSelected.snippet.description}}</p>
+        </div>
+        <div class="row">
+            <p class = "col-lg-2 wrapperChannel--Titles">My Uploads</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 wrapperChannel--scroll">
+                <a ng-repeat="item in uploads" ng-click="getUploadSelected($index)">
+                    <p class="wrapperChannel--title">{{item.snippet.title}}</p>
+                    <img src="{{item.snippet.thumbnails.medium.url}}" class="img">
+                </a>
+            </div>
+            <p class="col-lg-4 wrapperChannel--detailsTitle">{{uploadSelected.snippet.title}}</p>
+            <p class="col-lg-4 wrapperChannel--detailsDescription">{{uploadSelected.snippet.description}}</p>
+        </div>
+    </div>
+</div>

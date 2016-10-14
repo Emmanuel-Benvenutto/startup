@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: serif;
+}
+
+.header {
+    background-color: #90C3D4;
+}
+
+.header__title {
+    text-align: center;
+}
+
+.nav,.section,.aside {
+    float:left;
+    margin:10px;
+}
+
+.nav {
+    width: 20%;
+    background-color: #90C3D4;
+}
+
+.section {
+    width: 50%;
+}
+
+.aside {
+    width: 20%;
+    background-color: #90C3D4;
+}
+
+.footer {
+    clear:both;
+    background-color: #90C3D4;
+}
+
+.footer__text {
+    text-align: center;
+}
