@@ -1,0 +1,11 @@
+{
+  "name": "03-MVC-AngularJS",
+  "version": "0.0.1",
+  "description": "03-MVC-AngularJS",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.0.0",
+    "moment": "^2.11.2"
+  }
+}

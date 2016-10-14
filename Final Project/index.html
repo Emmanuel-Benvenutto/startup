@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Final Proyect</title>
+        <meta name="description" content="Final Proyect">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body class="content">
+        <dv>
+            <div class="container-fluid navMain row" id="nav">
+                <div class="col-lg-6 navMain--nav1">
+                    <a href="#searchVideos"><p class="navMain--routs">Search Videos</p></a>
+                </div>
+                <div class="col-lg-6 navMain--nav2">
+                    <a href="#myChannel"><p class="navMain--routs">My Channel</p></a>
+                </div>
+            </div>
+            <h4 id="TitleLogged" class ="content--loggued"></h4>
+            <div ng-controller="loginController">
+                <div class="row">  
+                    <h1 class="col-lg-12 content--mainTitle hTitle" id="mainTitle" >Please Login with your Google Account</h1>
+                </div lass="row">
+                    <input type="button" value = "Login" class="col-lg-12 content--login" id="login" ng-click="login()">
+                <div>  
+            </div>
+        </div>
+        <div ng-view>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        <script src="http://code.jquery.com/jquery-3.1.1.js"</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</script> 
+        <script type="text/javascript" src="javascript/script.js"></script>   
+        <script src="https://apis.google.com/js/api.js?onload=handleClientLoad"></script>
+    </body>
+</html>
